@@ -31,18 +31,26 @@
 
 def find_even_index(arr):
     
+    #We will travel the array from left to right, and return the 1st correct index we find, since we have to return the lowest
+    #correct index
     for i in range(len(arr)):
         
+        #These 2 variables will count both sides of the index we are testing, so that we can check if they both are equal, which would mean
+        #we have found a correct index.
         sumLeft = 0
         sumRight = 0
         
+        #This loop travels the entire array adding the values to the variables, to check if they finally equal once the
+        #entire array has been travelled
         for j in range(len(arr)):
             if i < j:
                 sumRight += arr[j]
             elif i > j:
                 sumLeft += arr[j]
 
+        #Check if both sides are equal, if so, we return that index.
         if sumLeft == sumRight:
             return i
     
+    #In case the entire array has been travelled and no correct index has been found, we return -1.
     return -1
