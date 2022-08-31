@@ -30,7 +30,7 @@ class Solution {
         return names[0] + " and " + names[1] + " like this";
       }
 
-      //In case 3 people like it we repeat the same process as for "2 people case" but the first concatenaion being made with a ", "
+      //In case 3 people like it we repeat the same process as for "2 people case" but the first concatenaion being made with a ", ".
       else if (names.length == 3) {
         return names[0] + ", " + names[1] + " and " + names[2] + " like this";
       }
@@ -38,7 +38,7 @@ class Solution {
       //In case more than 3 people like it we concatenate the first 2 elements with a ", ".
       //Then we concatenate the resulting string with the number of elements in the array "names" having substracted 2, 
       //since those are already  mentioned on the names.
-      //Then we concatenate all of that with " others like this"
+      //Then we concatenate all of that with " others like this".
       else {
         return names[0] + ", " + names[1] + " and " + (names.length-2) + " others like this";
       }
