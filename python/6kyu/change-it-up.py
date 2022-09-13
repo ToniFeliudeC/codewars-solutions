@@ -32,6 +32,6 @@ def changer(s):
         if i in "aeiou":
             consonantsLower += i.upper()
         else:
-            consonantsLower += i.lower()
+            consonantsLower += i
     
     return consonantsLower
